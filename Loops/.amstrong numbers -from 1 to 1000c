@@ -1,0 +1,18 @@
+//program  to print all amstrong numbers from 1 to 1000
+
+#include <stdio.h>
+int main(){
+    int num;
+    
+    for(num=1;num<=1000;num++){
+        int original = num,cube = 0,temp = num;
+        
+        while(temp!=0){
+            int digit = temp%10;
+            cube = cube + (digit*digit*digit);
+            temp = (temp-digit)/10;
+        }
+        if(original == cube){
+            printf("%d\n",num);
+        }
+    }
